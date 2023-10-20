@@ -1,0 +1,197 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar-brand{
+    font-size: 2rem;
+    color: black;
+    font-family: 'Lobster', cursive;
+}
+#user{
+   padding-right: 20px;
+   padding-bottom: 10px;
+}
+.navbar-brand:hover{
+    color: black;
+}
+.nav-link{
+    margin-right: 10px;
+    margin-left: 10px;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+
+}
+ .nav-link:hover{
+    color: black;
+ }
+ .control{
+    height: 40px;
+    width: 70%;
+    border-radius: 60px;
+    outline: none;
+    margin-right: -35px;
+    font-family: 'Roboto Slab', serif;
+    border: 2px solid rgb(63, 63, 255);  
+ }
+ .btn1{
+    height: 40px;
+    width: 30%;
+    outline: none;
+    border: none;
+    font-family: 'Roboto Slab', serif;
+    background-color: rgb(63, 63, 255);
+    color: white;
+    border-radius: 60px;
+    font-weight: 700;
+ }
+ .main{
+    background: url(./logo3.png)no-repeat;
+    background-size: cover;
+    height: 80vh;
+    background-position: 50% 50%;
+    width: 100%;
+ }
+  .main  h1{
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'Lobster', cursive;
+ }
+ .btn2{
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: rgb(63, 63, 255);
+    color: white;
+    font-weight: 700;
+    border-radius: 60px;
+ }
+ .btn2:hover{
+    background-color:rgb(103, 103, 229);
+    transition: 0.5s;
+ }
+.card:hover{
+    box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+    transition: 0.5s;
+}
+.news{
+   background-color: black;
+   color: white;
+}
+.btn3{
+    height: 45px;
+    width: 100px;
+    background: white;
+    margin-left: -10px;
+    border: 2px solid white;
+    color: black;
+    font-weight: 600;
+}
+.news input{
+   height: 45px;
+   width: 80%;
+   border: 2px solid white;
+   outline: none;
+   cursor: pointer;
+   background: black;
+   color: white;  
+   margin-top: 40px;
+   font-weight: 600;
+}
+.new::placeholder{
+   color: white;
+   height: 80%;
+   width: 80%;
+   cursor: pointer;
+}
+.new p{
+   margin: 0;
+}
+.fab{
+   cursor: pointer;
+   padding-right: 5px;
+}
+
+  #heart{
+   padding-left: 200px;
+   font-size: 25px;
+   color: red;
+  }
+  .p{
+   text-decoration: none;
+   color: white;
+  }
+
+  .centered-container {
+   padding-top: 10px;
+   padding-left: 100px;
+   padding-bottom: 50px;
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background overlay */
+   justify-content: center;
+   align-items: center;
+   z-index: 999; /* Ensure it's above other elements */
+}
+
+.centered-container .container {
+   background-color: #FFFFFF;; /* Background color for the centered container */
+   width: 600px;
+   height: 800px;
+   border-radius: 5px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+   text-align: center;
+}
+.p1{
+   font-size:medium ;
+   font-family: 'Times New Roman', Times, serif;
+   text-align: center;
+   justify-content:flex-start;
+
+}
+.rating {
+   unicode-bidi: bidi-override;
+   direction: rtl;
+   text-align: center;
+}
+.rating > label {
+   display: inline-block;
+   padding: 5px;
+   font-size: 24px;
+   cursor: pointer;
+}
+.rating > input[type="radio"] {
+   display: none;
+}
+.rating > label:before {
+   content: '\2605'; /* Unicode character for a star */
+}
+.rating > input[type="radio"]:checked ~ label:before {
+   content: '\2605\2605'; /* Unicode character for a filled star */
+   color: orange;
+}
+
+figure.zoom {
+   background-position: 50% 50%;
+   position: relative;
+   width: 500px;
+   overflow: hidden;
+   cursor: zoom-in;
+ }
+ figure.zoom img:hover {
+   opacity: 0;
+ }
+ figure.zoom img {
+   transition: opacity .5s;
+   display: block;
+   width: 100%;
+ }
+ 

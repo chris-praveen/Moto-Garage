@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c26cd2166c.js"></script>
+    <title>Product Order</title>
+    <link rel="stylesheet" href="s1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Warrenty Regstration</h1>
+        <form class="order-form" action="http://localhost:8000/sign_up" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" name="name" required>
+            <label for="email">Email Address:</label>
+            <input type="email" name="email" name="email" required>
+            <label for="email">Warrenty Code:</label>
+            <input type="text"  name="code" required>
+            <label for="product">Select a Product:</label>
+            <select id="product" required name="product">
+                <option value="" disabled selected>Select a product...</option>
+                <option value="bike" name="prodcut">Exhaust</option>
+                <option value="helmet"name="prodcut">Helmet</option>
+                <option value="lights"name="prodcut">Riding Gears</option>
+                <!-- Add more products as needed -->
+            </select>
+            <label for="quantity">Quantity:</label>
+            <input type="number" name="qua" min="1" name="quantity" required>
+            <label for="complaint">Complaint:</label>
+            <textarea name="complaint" id="complaint" rows="3"></textarea>
+            <input type="radio" class="radio1" name="com" >Return 
+            <input type="radio" class="radio1" name="com">Ex-change<br>
+            <br><button type="submit" value="submit">Sumbit</button>
+        </form>
+    </div><br><br><br><br>
+   
+</body>
+</html>

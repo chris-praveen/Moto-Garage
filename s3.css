@@ -1,0 +1,28 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const image = document.getElementById('rotating-image');
+    let isDragging = false;
+    let lastX;
+
+    image.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        lastX = e.clientX;
+    });
+
+    image.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+
+        const deltaX = e.clientX - lastX;
+        const rotation = parseInt(image.style.transform.replace('rotate(', '').replace('deg)', '') || 0);
+        const newRotation = rotation + deltaX;
+        image.style.transform = `rotate(${newRotation}deg)`;
+        lastX = e.clientX;
+    });
+
+    image.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+
+    image.addEventListener('mouseleave', () => {
+        isDragging = false;
+    });
+});

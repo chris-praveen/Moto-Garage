@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Zoom on Mouse Move</title>
+    <style>
+        #container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            align-items: center;
+            background-color: aquamarine;
+        }
+
+        #image {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+       <center><img id="image" src="images/b11.jpg" alt="Zoomable Image"></center>
+    </div>
+
+    <script>
+        const container = document.getElementById('container');
+        const image = document.getElementById('image');
+
+        container.addEventListener('mousemove', (e) => {
+            const { offsetX, offsetY } = e;
+            const { clientWidth, clientHeight } = container;
+            const xOffset = (offsetX / clientWidth) * 100;
+            const yOffset = (offsetY / clientHeight) * 100;
+            image.style.transform = `translate(-${xOffset}%, -${yOffset}%) scale(2)`;
+        });
+
+        container.addEventListener('mouseleave', () => {
+            image.style.transform = 'translate(0, 0) scale(1)';
+        });
+    </script>
+</body>
+</html>
